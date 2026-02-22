@@ -1,0 +1,310 @@
+{
+  "courseId": "BADM554",
+  "title": "Data Foundations",
+  "semester": "Fall 2026",
+  "canvasCourseId": 56880,
+  "weeks": 8,
+  "program": "MSBAi",
+
+  "outcomes": [
+    {
+      "id": "L1",
+      "title": "Relational Concepts",
+      "description": "Understand relational database concepts (tables, keys, relationships) and explain why normalization matters.",
+      "bloomLevel": "Understand",
+      "lceLevel": "literacy",
+      "competencyThreshold": "Can explain the purpose of primary keys, foreign keys, and 3NF to a non-technical stakeholder.",
+      "conceptIds": [1, 3, 5, 6, 10, 11, 13, 14, 15, 16, 17, 74, 76, 78, 79],
+      "weekMapping": [1, 3]
+    },
+    {
+      "id": "L2",
+      "title": "Read SQL",
+      "description": "Read and interpret SQL queries to identify what data they retrieve.",
+      "bloomLevel": "Understand",
+      "lceLevel": "literacy",
+      "competencyThreshold": "Given an unfamiliar SQL query with JOINs and aggregation, can describe in plain English what data it returns.",
+      "conceptIds": [19, 28, 29, 37, 42, 44, 45, 49, 55],
+      "weekMapping": [1, 2]
+    },
+    {
+      "id": "L3",
+      "title": "Data Quality Awareness",
+      "description": "Recognize when data needs cleaning and describe common data quality issues.",
+      "bloomLevel": "Understand",
+      "lceLevel": "literacy",
+      "competencyThreshold": "Can identify 3+ data quality issues in a messy dataset and explain why each matters for downstream analysis.",
+      "conceptIds": [108, 110, 159, 160, 161, 162, 163],
+      "weekMapping": [5, 8]
+    },
+    {
+      "id": "C1",
+      "title": "Write SQL",
+      "description": "Write SQL queries to extract, transform, and aggregate data from relational databases.",
+      "bloomLevel": "Apply",
+      "lceLevel": "competency",
+      "competencyThreshold": "Can independently write a multi-table JOIN with aggregation and filtering to answer a business question.",
+      "conceptIds": [19, 20, 21, 24, 25, 26, 28, 29, 31, 32, 37, 38, 39, 40, 42, 43, 44, 45, 49, 52, 54, 55],
+      "weekMapping": [1, 2]
+    },
+    {
+      "id": "C2",
+      "title": "Design Normalized Schema",
+      "description": "Design a normalized database schema (3NF) for a given business problem.",
+      "bloomLevel": "Apply",
+      "lceLevel": "competency",
+      "competencyThreshold": "Given business requirements, can produce an ERD and CREATE TABLE statements in 3NF with correct keys and constraints.",
+      "conceptIds": [63, 64, 65, 66, 67, 68, 73, 75, 76, 78, 79, 80],
+      "weekMapping": [3]
+    },
+    {
+      "id": "C3",
+      "title": "Build ETL Pipeline",
+      "description": "Use Python (pandas, sqlalchemy) to build a complete ETL pipeline.",
+      "bloomLevel": "Apply",
+      "lceLevel": "competency",
+      "competencyThreshold": "Can build an end-to-end pipeline that extracts from 2+ sources, transforms with pandas, and loads into a database via sqlalchemy.",
+      "conceptIds": [91, 93, 94, 96, 97, 98, 100, 102, 103, 107, 108, 109, 112, 113, 114, 115, 116, 117],
+      "weekMapping": [4, 5, 6]
+    },
+    {
+      "id": "C4",
+      "title": "Cloud Database Access",
+      "description": "Connect to cloud databases and run queries in browser-based SQL environments.",
+      "bloomLevel": "Apply",
+      "lceLevel": "competency",
+      "competencyThreshold": "Can configure an AWS RDS instance, connect from Python, and execute queries remotely.",
+      "conceptIds": [143, 144, 145, 146, 147],
+      "weekMapping": [7]
+    },
+    {
+      "id": "E1",
+      "title": "Design Trade-offs",
+      "description": "Evaluate design trade-offs (normalization vs. denormalization) for specific use cases.",
+      "bloomLevel": "Evaluate",
+      "lceLevel": "expertise",
+      "competencyThreshold": "Can justify denormalization decisions with performance data and articulate the trade-offs during oral defense.",
+      "conceptIds": [79, 80, 81, 82, 139, 148, 152],
+      "weekMapping": [3, 7]
+    },
+    {
+      "id": "E2",
+      "title": "Query Optimization",
+      "description": "Optimize queries for performance and design effective indexes.",
+      "bloomLevel": "Evaluate",
+      "lceLevel": "expertise",
+      "competencyThreshold": "Can analyze an EXPLAIN plan, identify bottlenecks, and design indexes that improve query performance by 30%+.",
+      "conceptIds": [148, 149, 150, 151, 152, 157, 158],
+      "weekMapping": [7]
+    }
+  ],
+
+  "misconceptions": [
+    {
+      "id": "M1",
+      "outcomeId": "C1",
+      "description": "SELECT * is fine for production queries",
+      "frequency": "Common",
+      "remediation": "Studio exercise: compare execution plans of SELECT * vs specific columns on a 1M row table. Measure performance difference.",
+      "conceptIds": [28, 150]
+    },
+    {
+      "id": "M2",
+      "outcomeId": "C1",
+      "description": "More JOINs always means slower queries",
+      "frequency": "Common",
+      "remediation": "Pair exercise: compare query plans for subquery vs JOIN approaches to the same question. Show when JOINs are actually faster.",
+      "conceptIds": [44, 49, 150]
+    },
+    {
+      "id": "M3",
+      "outcomeId": "C2",
+      "description": "Third Normal Form is always the right design choice",
+      "frequency": "Occasional",
+      "remediation": "Case study: data warehouse star schema vs 3NF OLTP. Show where denormalization improves read performance at the cost of write complexity.",
+      "conceptIds": [79, 81, 82]
+    },
+    {
+      "id": "M4",
+      "outcomeId": "C3",
+      "description": "Python is too slow for real data work — just use SQL",
+      "frequency": "Occasional",
+      "remediation": "Demo: tasks easy in pandas but painful in SQL (reshaping, regex cleaning, API calls). Show pandas+SQL is more powerful than either alone.",
+      "conceptIds": [91, 101, 112]
+    },
+    {
+      "id": "M5",
+      "outcomeId": "C3",
+      "description": "ETL pipelines should load all data at once to be efficient",
+      "frequency": "Common",
+      "remediation": "Build pipeline that crashes at row 50K of 100K. Show chunked loading with error handling recovers gracefully.",
+      "conceptIds": [102, 111, 116, 119]
+    },
+    {
+      "id": "M6",
+      "outcomeId": "L1",
+      "description": "NoSQL databases are newer and better than SQL databases",
+      "frequency": "Common",
+      "remediation": "CAP theorem exercise: for 3 business scenarios, determine whether SQL or NoSQL is the better fit and explain why.",
+      "conceptIds": [131, 133, 139]
+    },
+    {
+      "id": "M7",
+      "outcomeId": "C4",
+      "description": "Cloud databases are automatically faster than local ones",
+      "frequency": "Occasional",
+      "remediation": "Benchmark: same query on local PostgreSQL vs micro AWS RDS instance. Discuss network latency, instance sizing, and when cloud makes sense.",
+      "conceptIds": [143, 144, 150, 156]
+    },
+    {
+      "id": "M8",
+      "outcomeId": "L3",
+      "description": "If the data loads without errors, it must be clean",
+      "frequency": "Common",
+      "remediation": "Give students a CSV that loads perfectly but contains duplicates, type mismatches, and impossible values. Ask them to find 5 issues.",
+      "conceptIds": [108, 110, 159, 160, 161]
+    }
+  ],
+
+  "evidenceTypes": [
+    {
+      "id": "EV1",
+      "outcomeId": "L1",
+      "type": "Quiz",
+      "description": "Week 1-2 quiz: identify keys, explain relationships, interpret schema diagrams",
+      "rigorLevel": "Foundational",
+      "canvasAssignmentType": "Quiz"
+    },
+    {
+      "id": "EV2",
+      "outcomeId": "L2",
+      "type": "Quiz",
+      "description": "Week 2 quiz: given SQL queries, describe what data they return in plain English",
+      "rigorLevel": "Foundational",
+      "canvasAssignmentType": "Quiz"
+    },
+    {
+      "id": "EV3",
+      "outcomeId": "C1",
+      "type": "Project Queries",
+      "description": "Project 1: 5 sample SQL queries demonstrating schema functionality with correct JOINs and aggregation",
+      "rigorLevel": "Proficient",
+      "canvasAssignmentType": "Assignment"
+    },
+    {
+      "id": "EV4",
+      "outcomeId": "C2",
+      "type": "ERD + Schema",
+      "description": "Project 1: ERD in DrawIO + CREATE TABLE statements + normalization analysis justifying 3NF",
+      "rigorLevel": "Proficient",
+      "canvasAssignmentType": "Assignment"
+    },
+    {
+      "id": "EV5",
+      "outcomeId": "C3",
+      "type": "ETL Pipeline",
+      "description": "Project 2: end-to-end Python script (pandas + sqlalchemy) with Jupyter notebook explaining each step",
+      "rigorLevel": "Proficient",
+      "canvasAssignmentType": "Assignment"
+    },
+    {
+      "id": "EV6",
+      "outcomeId": "C3",
+      "type": "Peer Code Review",
+      "description": "Week 5: structured peer review of ETL code quality, documentation, and error handling",
+      "rigorLevel": "Proficient",
+      "canvasAssignmentType": "Discussion"
+    },
+    {
+      "id": "EV7",
+      "outcomeId": "C4",
+      "type": "AWS Setup",
+      "description": "Week 7 quiz: demonstrate AWS RDS connectivity + run 3 queries remotely",
+      "rigorLevel": "Foundational",
+      "canvasAssignmentType": "Quiz"
+    },
+    {
+      "id": "EV8",
+      "outcomeId": "E1",
+      "type": "Oral Defense",
+      "description": "Project 3: team oral defense (8-10 min + 5 min Q&A) justifying design trade-offs with performance data",
+      "rigorLevel": "Advanced",
+      "canvasAssignmentType": "Assignment"
+    },
+    {
+      "id": "EV9",
+      "outcomeId": "E2",
+      "type": "Performance Analysis",
+      "description": "Project 3: before/after query performance comparison with index design rationale",
+      "rigorLevel": "Advanced",
+      "canvasAssignmentType": "Assignment"
+    },
+    {
+      "id": "EV10",
+      "outcomeId": "L3",
+      "type": "DataCamp Assignment",
+      "description": "DataCamp data cleaning module + reflection on data quality dimensions",
+      "rigorLevel": "Foundational",
+      "canvasAssignmentType": "ExternalTool"
+    }
+  ],
+
+  "guardrails": [
+    {
+      "id": "G1",
+      "category": "FERPA",
+      "title": "No PII in Public Repos",
+      "description": "Student projects use synthetic or public datasets only. No personally identifiable information in GitHub repos or Canvas submissions.",
+      "enforcement": "Project rubric includes 'Data Privacy' dimension. Automated scan of repo for common PII patterns before grading."
+    },
+    {
+      "id": "G2",
+      "category": "Integrity",
+      "title": "AI Attribution Required",
+      "description": "All AI tool usage must be documented in an AI Attribution Log: date, tool, prompt summary, output summary, modifications made.",
+      "enforcement": "AI Attribution Log is a required deliverable in Projects 1-3. Missing log = incomplete submission."
+    },
+    {
+      "id": "G3",
+      "category": "Integrity",
+      "title": "Oral Defense Verifies Understanding",
+      "description": "Project 3 team oral defense ensures students can explain and defend their technical choices without AI assistance.",
+      "enforcement": "20% of Project 3 grade is oral defense. AIAS Level 0 during defense. Individual follow-up questions to each team member."
+    },
+    {
+      "id": "G4",
+      "category": "Rigor",
+      "title": "Uniform Rubrics Across Pathways",
+      "description": "All students assessed against identical rubric dimensions regardless of their adaptive pathway through the material.",
+      "enforcement": "5-dimension rubric per project. Same thresholds for Excellent/Proficient/Developing for all students."
+    },
+    {
+      "id": "G5",
+      "category": "Rigor",
+      "title": "No AI on Formative Quizzes",
+      "description": "Weekly quizzes test foundational knowledge without AI assistance (AIAS Level 0).",
+      "enforcement": "Canvas quiz settings: timed, no browser navigation, randomized question order."
+    },
+    {
+      "id": "G6",
+      "category": "Accreditation",
+      "title": "L-C-E Progression Documented",
+      "description": "Each outcome maps to L-C-E level. Evidence collected at each level supports AACSB Assurance of Learning.",
+      "enforcement": "Course spec maps outcomes → evidence → assessment. Aggregated results reported per AACSB cycle."
+    },
+    {
+      "id": "G7",
+      "category": "AI_Constraints",
+      "title": "AIAS Levels Per Assignment",
+      "description": "Each assessment has a declared AI Assessment Integration Scale level. Level 0 = no AI, Level 2 = AI-assisted with attribution, Level 3 = AI as collaborative tool.",
+      "enforcement": "AIAS level printed on every assignment. Projects 1-2 = Level 2, Project 3 = Level 3, Quizzes = Level 0, Oral Defense = Level 0."
+    },
+    {
+      "id": "G8",
+      "category": "AI_Constraints",
+      "title": "Process Documentation Required",
+      "description": "Projects require documentation of methodology: approaches tried, AI tools used, lessons from failures, how AI output was validated.",
+      "enforcement": "Process Documentation section in every project rubric (10-15% weight). Missing = maximum 'Developing' on that dimension."
+    }
+  ]
+}

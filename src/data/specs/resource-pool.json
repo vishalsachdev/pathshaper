@@ -1,0 +1,174 @@
+{
+  "resources": [
+    { "id": "R1",  "title": "Chapter 1: The Database Environment",     "type": "Reading",     "outcomes": ["L1"],      "difficulty": "Introductory",  "estimatedMinutes": 45, "conceptIds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] },
+    { "id": "R2",  "title": "Chapter 2: SQL Fundamentals",             "type": "Reading",     "outcomes": ["L2", "C1"], "difficulty": "Introductory",  "estimatedMinutes": 60, "conceptIds": [19, 20, 21, 24, 25, 26, 28, 29, 31, 32, 33, 34, 35, 36] },
+    { "id": "R3",  "title": "Chapter 3: JOINs and Aggregation",        "type": "Reading",     "outcomes": ["C1"],      "difficulty": "Intermediate",  "estimatedMinutes": 60, "conceptIds": [37, 38, 39, 40, 42, 43, 44, 45, 46, 49, 52, 54, 55] },
+    { "id": "R4",  "title": "Chapter 4: Data Modeling & Normalization", "type": "Reading",     "outcomes": ["C2", "E1"],"difficulty": "Intermediate",  "estimatedMinutes": 55, "conceptIds": [63, 64, 65, 66, 67, 68, 73, 74, 75, 76, 78, 79, 80, 81] },
+    { "id": "R5",  "title": "Chapter 5: Python & pandas for Data",     "type": "Reading",     "outcomes": ["C3"],      "difficulty": "Introductory",  "estimatedMinutes": 50, "conceptIds": [83, 84, 85, 86, 87, 91, 93, 94, 95, 96, 97, 98, 100] },
+    { "id": "R6",  "title": "Chapter 6: ETL Pipelines",                "type": "Reading",     "outcomes": ["C3"],      "difficulty": "Intermediate",  "estimatedMinutes": 55, "conceptIds": [102, 103, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117] },
+    { "id": "R7",  "title": "Chapter 7: NoSQL & APIs",                 "type": "Reading",     "outcomes": ["L1"],      "difficulty": "Intermediate",  "estimatedMinutes": 45, "conceptIds": [121, 125, 131, 132, 133, 134, 136, 137, 139] },
+    { "id": "R8",  "title": "Chapter 8: Cloud Databases & Optimization","type": "Reading",     "outcomes": ["C4", "E2"],"difficulty": "Advanced",      "estimatedMinutes": 50, "conceptIds": [143, 144, 148, 149, 150, 151, 152, 156] },
+    { "id": "R9",  "title": "Video: Relational Model in 30 Minutes",   "type": "Video",       "outcomes": ["L1"],      "difficulty": "Introductory",  "estimatedMinutes": 30, "conceptIds": [5, 6, 10, 11, 13, 15, 16, 17] },
+    { "id": "R10", "title": "Video: SQL SELECT Deep Dive",             "type": "Video",       "outcomes": ["L2", "C1"],"difficulty": "Introductory",  "estimatedMinutes": 30, "conceptIds": [28, 29, 31, 32, 37, 42, 44] },
+    { "id": "R11", "title": "Video: JOINs and Subqueries",             "type": "Video",       "outcomes": ["C1"],      "difficulty": "Intermediate",  "estimatedMinutes": 30, "conceptIds": [44, 45, 46, 49, 50, 55, 57] },
+    { "id": "R12", "title": "Video: ER Diagrams Step-by-Step",         "type": "Video",       "outcomes": ["C2"],      "difficulty": "Intermediate",  "estimatedMinutes": 30, "conceptIds": [63, 64, 65, 66, 67, 68, 73] },
+    { "id": "R13", "title": "Jupyter Notebook: pandas Fundamentals",   "type": "Interactive", "outcomes": ["C3"],      "difficulty": "Introductory",  "estimatedMinutes": 45, "conceptIds": [89, 91, 93, 94, 95, 96, 97, 98, 100] },
+    { "id": "R14", "title": "Video: ETL Pipeline Architecture",        "type": "Video",       "outcomes": ["C3"],      "difficulty": "Intermediate",  "estimatedMinutes": 30, "conceptIds": [102, 103, 107, 111, 112, 118] },
+    { "id": "R15", "title": "Video: NoSQL Fundamentals",               "type": "Video",       "outcomes": ["L1"],      "difficulty": "Intermediate",  "estimatedMinutes": 30, "conceptIds": [131, 132, 133, 134, 135, 136] },
+    { "id": "R16", "title": "Video: Cloud Databases & Indexing",        "type": "Video",       "outcomes": ["C4", "E2"],"difficulty": "Advanced",      "estimatedMinutes": 30, "conceptIds": [143, 144, 148, 150, 151, 152] },
+    { "id": "R17", "title": "Video: Data Quality & Governance",         "type": "Video",       "outcomes": ["L3"],      "difficulty": "Introductory",  "estimatedMinutes": 30, "conceptIds": [159, 160, 161, 162, 164, 169] },
+    { "id": "R18", "title": "Lab: E-commerce Schema Design",           "type": "Lab",         "outcomes": ["C1", "C2"],"difficulty": "Intermediate",  "estimatedMinutes": 90, "conceptIds": [17, 18, 21, 28, 44, 64, 73, 76, 79] },
+    { "id": "R19", "title": "Lab: ETL from Yelp API",                  "type": "Lab",         "outcomes": ["C3"],      "difficulty": "Intermediate",  "estimatedMinutes": 90, "conceptIds": [102, 112, 121, 129, 130] },
+    { "id": "R20", "title": "Lab: MongoDB CRUD Operations",            "type": "Lab",         "outcomes": ["C3"],      "difficulty": "Intermediate",  "estimatedMinutes": 60, "conceptIds": [136, 137, 138] },
+    { "id": "R21", "title": "Lab: AWS RDS Setup & Query Tuning",       "type": "Lab",         "outcomes": ["C4", "E2"],"difficulty": "Advanced",      "estimatedMinutes": 90, "conceptIds": [144, 145, 147, 151, 152] },
+    { "id": "R22", "title": "DataCamp: Introduction to SQL",           "type": "Interactive", "outcomes": ["L2", "C1"],"difficulty": "Introductory",  "estimatedMinutes": 240,"conceptIds": [19, 28, 29, 37, 44] },
+    { "id": "R23", "title": "DataCamp: Data Cleaning in Python",       "type": "Interactive", "outcomes": ["L3", "C3"],"difficulty": "Intermediate",  "estimatedMinutes": 240,"conceptIds": [91, 100, 108] }
+  ],
+
+  "modules": [
+    {
+      "week": 1,
+      "theme": "Relational Databases + SQL SELECT",
+      "taxonomyIds": ["FOUND", "SQL"],
+      "textbookChapter": "Ch 1 + Ch 2 (partial)",
+      "conceptRange": [1, 36],
+      "project": 1,
+      "studioTopic": "Project kickoff: database design walkthrough + SQLFiddle setup",
+      "aiasLevel": 0,
+      "items": [
+        { "id": "W1-overview", "type": "overview",  "title": "Week 1: Welcome to Data Foundations",       "description": "Course orientation, relational model foundations, your first SQL queries", "conceptIds": [] },
+        { "id": "W1-read",     "type": "reading",   "title": "Chapter 1: The Database Environment",       "description": "Data, databases, DBMS, relational model", "conceptIds": [1, 2, 3, 4, 5] },
+        { "id": "W1-vid1",     "type": "video",     "title": "Relational Model in 30 Minutes",            "description": "Tables, keys, relationships — the building blocks", "conceptIds": [6, 10, 11, 13, 17] },
+        { "id": "W1-vid2",     "type": "video",     "title": "SQL SELECT Deep Dive",                      "description": "Your first queries: SELECT, WHERE, ORDER BY", "conceptIds": [28, 29, 31, 32] },
+        { "id": "W1-vid3",     "type": "video",     "title": "DDL + DML Fundamentals",                    "description": "CREATE TABLE, INSERT, UPDATE, DELETE", "conceptIds": [20, 21, 24, 25, 26] },
+        { "id": "W1-studio",   "type": "studio",    "title": "Studio: Project Kickoff + SQLFiddle Setup",  "description": "I-do: design walkthrough for e-commerce case. We-do: set up SQLFiddle. You-do: write first 3 queries in pairs.", "conceptIds": [171, 172] },
+        { "id": "W1-quiz",     "type": "quiz",      "title": "Quiz 1: Relational Foundations (L1, L2)",    "description": "Identify keys, explain relationships, interpret schema diagrams. AIAS Level 0.", "conceptIds": [6, 10, 11, 13, 17, 28, 29] }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "JOINs, Subqueries, Aggregation",
+      "taxonomyIds": ["SQL"],
+      "textbookChapter": "Ch 2 (continued) + Ch 3",
+      "conceptRange": [37, 62],
+      "project": 1,
+      "studioTopic": "SQL deep-dive: JOIN patterns + common mistakes, AI for SQL debugging",
+      "aiasLevel": 0,
+      "items": [
+        { "id": "W2-overview", "type": "overview",  "title": "Week 2: Power SQL",                          "description": "Aggregation, JOINs, subqueries — the queries that answer real business questions", "conceptIds": [] },
+        { "id": "W2-vid1",     "type": "video",     "title": "Aggregate Functions & GROUP BY",             "description": "COUNT, SUM, AVG, GROUP BY, HAVING", "conceptIds": [37, 38, 39, 40, 42, 43] },
+        { "id": "W2-vid2",     "type": "video",     "title": "JOINs and Subqueries",                      "description": "INNER, LEFT, RIGHT JOIN + subquery patterns", "conceptIds": [44, 45, 46, 49, 50, 55] },
+        { "id": "W2-vid3",     "type": "video",     "title": "CTEs and Window Functions",                  "description": "Common Table Expressions, ROW_NUMBER, RANK, LEAD/LAG", "conceptIds": [57, 58, 59, 60, 61, 62] },
+        { "id": "W2-studio",   "type": "studio",    "title": "Studio: JOIN Patterns + AI Debugging",       "description": "I-do: live JOIN debugging with Claude. We-do: analyze common mistakes. You-do: pair debugging challenge.", "conceptIds": [173, 174] },
+        { "id": "W2-quiz",     "type": "quiz",      "title": "Quiz 2: SQL Competency (C1)",                "description": "Write queries with JOINs and aggregation. AIAS Level 0.", "conceptIds": [37, 42, 44, 49, 55] }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Data Modeling + ER Diagrams + Normalization",
+      "taxonomyIds": ["MODEL"],
+      "textbookChapter": "Ch 4",
+      "conceptRange": [63, 82],
+      "project": 1,
+      "studioTopic": "ER diagram workshop in DrawIO + normalization decision-making",
+      "aiasLevel": 2,
+      "items": [
+        { "id": "W3-overview", "type": "overview",  "title": "Week 3: Designing Databases",                "description": "ER modeling, normalization, and translating business requirements into schema", "conceptIds": [] },
+        { "id": "W3-vid1",     "type": "video",     "title": "ER Diagrams Step-by-Step",                   "description": "Entities, attributes, relationships, cardinality", "conceptIds": [63, 64, 65, 66, 67, 68] },
+        { "id": "W3-read",     "type": "reading",   "title": "Chapter 4: Data Modeling & Normalization",   "description": "ER → relational mapping, 1NF through BCNF, denormalization trade-offs", "conceptIds": [73, 74, 75, 76, 78, 79, 80, 81, 82] },
+        { "id": "W3-studio",   "type": "studio",    "title": "Studio: ERD Workshop in DrawIO",             "description": "I-do: model e-commerce case in DrawIO. We-do: identify normalization issues. You-do: refine your Project 1 ERD with partner.", "conceptIds": [175, 176] },
+        { "id": "W3-project",  "type": "project",   "title": "PROJECT 1 DUE: Relational Database Design",  "description": "ERD + SQL schema + normalization analysis + 5 queries + GitHub repo. AIAS Level 2.", "conceptIds": [17, 18, 21, 64, 73, 76, 79] }
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Python Fundamentals + pandas",
+      "taxonomyIds": ["PYTHON"],
+      "textbookChapter": "Ch 5",
+      "conceptRange": [83, 101],
+      "project": 2,
+      "studioTopic": "pandas fundamentals + AI for debugging DataFrames",
+      "aiasLevel": 2,
+      "items": [
+        { "id": "W4-overview", "type": "overview",  "title": "Week 4: Python for Data",                   "description": "Python basics, Jupyter, pandas — your new data toolkit", "conceptIds": [] },
+        { "id": "W4-vid1",     "type": "video",     "title": "Python Fundamentals for Data Work",          "description": "Variables, lists, dicts, functions, file I/O — just enough Python", "conceptIds": [83, 84, 85, 86, 87, 88] },
+        { "id": "W4-vid2",     "type": "video",     "title": "pandas: The Data Swiss Army Knife",          "description": "Series, DataFrame, read_csv, loc/iloc, filtering, groupby, merge", "conceptIds": [91, 92, 93, 94, 95, 96, 97, 98, 100] },
+        { "id": "W4-vid3",     "type": "video",     "title": "Pandas vs SQL: When to Use Each",            "description": "Comparison framework for choosing the right tool", "conceptIds": [101] },
+        { "id": "W4-notebook", "type": "lab",        "title": "Jupyter Notebook: pandas Fundamentals",     "description": "Hands-on notebook: load, filter, group, merge a real dataset", "conceptIds": [89, 93, 94, 96, 97, 98] },
+        { "id": "W4-studio",   "type": "studio",    "title": "Studio: pandas + AI Debugging",              "description": "I-do: debug DataFrame errors with Claude. We-do: pandas operations challenge. You-do: pair data wrangling.", "conceptIds": [177, 178] },
+        { "id": "W4-datacamp", "type": "quiz",      "title": "DataCamp: Data Cleaning Assignment",         "description": "Complete DataCamp module on data cleaning with Python.", "conceptIds": [100, 108] }
+      ]
+    },
+    {
+      "week": 5,
+      "theme": "ETL Pipelines (pandas + sqlalchemy)",
+      "taxonomyIds": ["ETL"],
+      "textbookChapter": "Ch 6",
+      "conceptRange": [102, 120],
+      "project": 2,
+      "studioTopic": "ETL pipeline workshop: error handling + logging best practices",
+      "aiasLevel": 2,
+      "items": [
+        { "id": "W5-overview", "type": "overview",  "title": "Week 5: Building Data Pipelines",            "description": "Extract-Transform-Load: from data sources to database, reliably", "conceptIds": [] },
+        { "id": "W5-vid1",     "type": "video",     "title": "ETL Pipeline Architecture",                  "description": "The ETL pattern: extract from sources, transform with pandas, load via sqlalchemy", "conceptIds": [102, 103, 107, 111, 118] },
+        { "id": "W5-vid2",     "type": "video",     "title": "SQLAlchemy: Python Meets Databases",         "description": "create_engine, read_sql, to_sql — the Python-database bridge", "conceptIds": [112, 113, 114, 115] },
+        { "id": "W5-vid3",     "type": "video",     "title": "Error Handling & Logging",                   "description": "try-except patterns, Python logging module, building resilient pipelines", "conceptIds": [116, 117, 119, 120] },
+        { "id": "W5-studio",   "type": "studio",    "title": "Studio: ETL Build + Pair Debugging",         "description": "I-do: build pipeline from CSV to DB. We-do: add error handling. You-do: pair debug a broken pipeline.", "conceptIds": [179, 180] },
+        { "id": "W5-review",   "type": "discussion","title": "Peer Code Review",                           "description": "Structured review of a partner's ETL code for quality, docs, and error handling.", "conceptIds": [116, 117, 118] }
+      ]
+    },
+    {
+      "week": 6,
+      "theme": "NoSQL (MongoDB) + API Data Ingestion",
+      "taxonomyIds": ["NOSQL"],
+      "textbookChapter": "Ch 7",
+      "conceptRange": [121, 142],
+      "project": 2,
+      "studioTopic": "MongoDB Compass + real API integration (Yelp/weather)",
+      "aiasLevel": 2,
+      "items": [
+        { "id": "W6-overview", "type": "overview",  "title": "Week 6: Beyond Relational",                  "description": "NoSQL databases, REST APIs, and extracting data from the real world", "conceptIds": [] },
+        { "id": "W6-vid1",     "type": "video",     "title": "NoSQL Fundamentals",                         "description": "Why NoSQL? CAP theorem, document vs key-value vs column-family vs graph", "conceptIds": [131, 132, 133, 134, 135] },
+        { "id": "W6-vid2",     "type": "video",     "title": "MongoDB + REST APIs",                        "description": "MongoDB CRUD, JSON, REST APIs, the requests library, authentication", "conceptIds": [125, 136, 137, 121, 123, 129, 140, 141] },
+        { "id": "W6-studio",   "type": "studio",    "title": "Studio: MongoDB Compass + API Hands-on",     "description": "I-do: MongoDB Compass walkthrough. We-do: query a real API. You-do: pair API integration for Project 2.", "conceptIds": [142, 181, 182] },
+        { "id": "W6-checkpoint","type": "quiz",      "title": "Mid-Course Checkpoint",                     "description": "Self-assessment + instructor review of progress. Covers L1-L3, C1-C3.", "conceptIds": [] },
+        { "id": "W6-project",  "type": "project",   "title": "PROJECT 2 DUE: ETL Pipeline in Python",     "description": "End-to-end pipeline (pandas + sqlalchemy) from 2+ sources with error handling + Jupyter notebook. AIAS Level 2.", "conceptIds": [102, 112, 116, 117, 129, 130] }
+      ]
+    },
+    {
+      "week": 7,
+      "theme": "Cloud Databases + Query Optimization",
+      "taxonomyIds": ["CLOUD"],
+      "textbookChapter": "Ch 8",
+      "conceptRange": [143, 158],
+      "project": 3,
+      "studioTopic": "AWS RDS setup walkthrough + EXPLAIN plan analysis",
+      "aiasLevel": 3,
+      "items": [
+        { "id": "W7-overview", "type": "overview",  "title": "Week 7: Cloud + Performance",                "description": "Deploy to AWS RDS, optimize with indexes, automate with Lambda", "conceptIds": [] },
+        { "id": "W7-vid1",     "type": "video",     "title": "Cloud Databases & AWS RDS",                  "description": "Cloud fundamentals, RDS setup, security groups, cost awareness", "conceptIds": [143, 144, 145, 146, 156] },
+        { "id": "W7-vid2",     "type": "video",     "title": "Query Optimization & Indexing",              "description": "EXPLAIN plans, B-tree indexes, index strategy, connection pooling", "conceptIds": [148, 149, 150, 151, 152, 157, 158] },
+        { "id": "W7-studio",   "type": "studio",    "title": "Studio: AWS RDS Setup + EXPLAIN Hands-on",   "description": "I-do: live AWS RDS setup. We-do: analyze EXPLAIN plans. You-do: pair optimization challenge for Project 3.", "conceptIds": [183, 184] },
+        { "id": "W7-quiz",     "type": "quiz",      "title": "Quiz: AWS Setup + Connectivity (C4)",        "description": "Demonstrate RDS connectivity from Python + run 3 remote queries. AIAS Level 0.", "conceptIds": [144, 147, 151] }
+      ]
+    },
+    {
+      "week": 8,
+      "theme": "Data Quality, Governance + Synthesis",
+      "taxonomyIds": ["GOVERN"],
+      "textbookChapter": "Ch 9 (review)",
+      "conceptRange": [159, 186],
+      "project": 3,
+      "studioTopic": "Final presentations + portfolio feedback",
+      "aiasLevel": 3,
+      "items": [
+        { "id": "W8-overview", "type": "overview",  "title": "Week 8: Quality, Governance + What's Next",  "description": "Data quality dimensions, privacy, ethics, ACID — and preparing your portfolio", "conceptIds": [] },
+        { "id": "W8-vid1",     "type": "video",     "title": "Data Quality & Governance",                  "description": "Quality dimensions, governance frameworks, FERPA, data ethics", "conceptIds": [159, 160, 161, 162, 163, 164, 165, 166, 169, 170] },
+        { "id": "W8-vid2",     "type": "video",     "title": "ACID Properties & Transactions",             "description": "Atomicity, Consistency, Isolation, Durability — why they matter for pipelines", "conceptIds": [167, 168] },
+        { "id": "W8-studio",   "type": "studio",    "title": "Studio: Presentations + Portfolio",          "description": "Team demos of Project 3 + peer feedback. Portfolio assembly in GitHub.", "conceptIds": [185, 186] },
+        { "id": "W8-project",  "type": "project",   "title": "PROJECT 3 DUE: Cloud Database + Optimization","description": "AWS RDS live + performance analysis + indexes + architecture diagram + oral defense. AIAS Level 3.", "conceptIds": [144, 147, 148, 152, 155] },
+        { "id": "W8-defense",  "type": "project",   "title": "Oral Defense (Team)",                        "description": "8-10 min presentation + 5 min Q&A. Justify design trade-offs with performance data. AIAS Level 0.", "conceptIds": [] }
+      ]
+    }
+  ]
+}
