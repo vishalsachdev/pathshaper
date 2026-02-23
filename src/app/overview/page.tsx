@@ -49,6 +49,10 @@ export default function OverviewPage() {
             title="NLSpec (Natural Language Specification)"
             description="Faculty express course intent as structured JSON — outcomes, misconceptions, guardrails, evidence types. AI agents read these specs to generate content. Faculty reviews and approves. The spec is the contract between human judgment and machine generation."
             origin="PathShaper original"
+            links={[
+              { label: "View specs in app", href: "https://pathshaper-554.vercel.app/specs" },
+              { label: "StrongDM NLSpec pattern", href: "https://factory.strongdm.ai/techniques" },
+            ]}
           />
           <ModelCard
             title="Intelligent Textbook"
@@ -63,6 +67,9 @@ export default function OverviewPage() {
             title={"L-C-E Framework (Literacy \u2192 Competency \u2192 Expertise)"}
             description={"MSBAi\u2019s progression model adapted from the UNESCO AI competency framework. Each learning outcome is tagged with an L-C-E level and a Bloom\u2019s verb. BADM 554 covers L\u2192C; later courses deepen to E. This gives the program a coherent vertical arc across 5 semesters."}
             origin="UNESCO / MSBAi"
+            links={[
+              { label: "UNESCO AI framework", href: "https://www.unesco.org/en/digital-education/ai-future-learning" },
+            ]}
           />
           <ModelCard
             title="AIAS (AI Assessment Integration Scale)"
@@ -73,11 +80,17 @@ export default function OverviewPage() {
             title="Core vs Studio Split"
             description="Core concepts are durable knowledge delivered in videos (long shelf life). Studio concepts are applied skills — tool demos, AI workflows, pair exercises — with short shelf life. Studios are the personalization surface: different students can follow different studio paths while covering identical core content."
             origin="PathShaper original"
+            links={[
+              { label: "View learning graph", href: "https://pathshaper-554.vercel.app/graph" },
+            ]}
           />
           <ModelCard
             title="Spiral Curriculum"
             description="Each concept is tagged introduce / practice / deepen. A concept introduced in Week 2 is practiced in a project that same course, then deepened in a later MSBAi course (BADM 558, FIN 550). The graph encodes where each concept sits in the spiral."
             origin="Jerome Bruner (1960)"
+            links={[
+              { label: "Concept (Wikipedia)", href: "https://en.wikipedia.org/wiki/Spiral_approach" },
+            ]}
           />
           <ModelCard
             title={"Survey Bot \u2192 Learner Profiles"}
@@ -105,7 +118,7 @@ export default function OverviewPage() {
         </div>
       </section>
 
-      {/* Connected repos */}
+      {/* Connected projects */}
       <section className="mb-10">
         <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">
           Connected Projects
@@ -114,22 +127,26 @@ export default function OverviewPage() {
           <RepoCard
             name="pathshaper"
             description="This app. Instructor cockpit + generation dashboard + adaptive pathway viewer."
-            href="https://github.com/vishalsachdev/pathshaper"
+            href="https://pathshaper-554.vercel.app"
+            extra="Live on Vercel"
           />
           <RepoCard
             name="database-management"
-            description="Intelligent textbook for BADM 554. 8 chapters, 186-concept learning graph, MkDocs Material."
-            href="https://github.com/vishalsachdev/database-management"
+            description="Intelligent textbook for BADM 554. 9 chapters, 186-concept learning graph, MkDocs Material."
+            href="https://vishalsachdev.github.io/database-management/"
+            extra="Live on GitHub Pages"
           />
           <RepoCard
             name="badm554-bot"
             description="WhatsApp AI tutor (production). LLM-powered concept-level support for enrolled students."
-            href="https://github.com/vishalsachdev/badm554-bot"
+            href="https://chatwithgpt.substack.com/p/conversations-with-ai-for-learning"
+            extra="Read the article"
           />
           <RepoCard
             name="badm554-survey-bot"
             description="Pre-course learner profiling. 68 automated interview sessions, skill gap analysis."
-            href="https://github.com/vishalsachdev/badm554-survey-bot"
+            href="https://badm554-survey-bot.vercel.app"
+            extra="Live on Vercel"
           />
         </div>
       </section>
@@ -361,10 +378,12 @@ function RepoCard({
   name,
   description,
   href,
+  extra,
 }: {
   name: string;
   description: string;
   href: string;
+  extra?: string;
 }) {
   return (
     <a
@@ -373,7 +392,10 @@ function RepoCard({
       rel="noopener noreferrer"
       className="card block hover:ring-1 hover:ring-[var(--navy)]/20 transition-shadow"
     >
-      <p className="text-xs font-bold text-[var(--navy)] font-mono">{name}</p>
+      <div className="flex items-center justify-between gap-2">
+        <p className="text-xs font-bold text-[var(--navy)] font-mono">{name}</p>
+        {extra && <span className="text-[9px] font-medium text-green-600 bg-green-50 px-1.5 py-0.5 rounded-full">{extra}</span>}
+      </div>
       <p className="text-[10px] text-gray-500 mt-1 leading-relaxed">{description}</p>
     </a>
   );
