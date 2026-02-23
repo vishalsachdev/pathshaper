@@ -139,7 +139,7 @@ export default function OverviewPage() {
           <RepoCard
             name="badm554-bot"
             description="WhatsApp AI tutor (production). LLM-powered concept-level support for enrolled students."
-            href="https://chatwithgpt.substack.com/p/conversations-with-ai-for-learning"
+            href="https://chatwithgpt.substack.com/p/i-put-an-ai-teaching-assistant-in"
             extra="Read the article"
           />
           <RepoCard
