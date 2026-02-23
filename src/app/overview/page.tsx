@@ -39,6 +39,91 @@ export default function OverviewPage() {
         </p>
       </section>
 
+      {/* Mental Models */}
+      <section className="mb-10">
+        <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">
+          Mental Models &amp; Influences
+        </h2>
+        <div className="space-y-4">
+          <ModelCard
+            title="NLSpec (Natural Language Specification)"
+            description="Faculty express course intent as structured JSON — outcomes, misconceptions, guardrails, evidence types. AI agents read these specs to generate content. Faculty reviews and approves. The spec is the contract between human judgment and machine generation."
+            origin="PathShaper original"
+          />
+          <ModelCard
+            title="Intelligent Textbook"
+            description="Dan McCreary's framework for textbooks that go beyond static PDFs. A 186-concept dependency graph (DAG) powers adaptive sequencing. Content is generated via Claude Code skills — chapters, quizzes, MicroSims, studio guides — all traced back to concepts."
+            origin="Dan McCreary"
+            links={[
+              { label: "Claude Skills repo", href: "https://github.com/dmccreary/claude-skills" },
+              { label: "Framework docs", href: "https://dmccreary.github.io/claude-skills/" },
+            ]}
+          />
+          <ModelCard
+            title="L-C-E Framework (Literacy \u2192 Competency \u2192 Expertise)"
+            description="MSBAi's progression model adapted from the UNESCO AI competency framework. Each learning outcome is tagged with an L-C-E level and a Bloom's verb. BADM 554 covers L\u2192C; later courses deepen to E. This gives the program a coherent vertical arc across 5 semesters."
+            origin="UNESCO / MSBAi"
+          />
+          <ModelCard
+            title="AIAS (AI Assessment Integration Scale)"
+            description="A 0\u20133 scale printed on every assignment that tells students exactly how they may use AI. Level 0 = no AI (quizzes, oral defense). Level 2 = AI-assisted with attribution. Level 3 = AI as collaborator with full disclosure. Prevents ambiguity and enables progressive AI trust."
+            origin="MSBAi assessment design"
+          />
+          <ModelCard
+            title="Core vs Studio Split"
+            description="Core concepts are durable knowledge delivered in videos (long shelf life). Studio concepts are applied skills — tool demos, AI workflows, pair exercises — with short shelf life. Studios are the personalization surface: different students can follow different studio paths while covering identical core content."
+            origin="PathShaper original"
+          />
+          <ModelCard
+            title="Spiral Curriculum"
+            description="Each concept is tagged introduce / practice / deepen. A concept introduced in Week 2 is practiced in a project that same course, then deepened in a later MSBAi course (BADM 558, FIN 550). The graph encodes where each concept sits in the spiral."
+            origin="Jerome Bruner (1960)"
+          />
+          <ModelCard
+            title="Survey Bot \u2192 Learner Profiles"
+            description="A WhatsApp-based survey bot conducts automated interviews (68 sessions so far) to build student skill profiles before the course starts. These profiles feed the adaptive pathway engine — different starting points and studio sequences based on incoming skill gaps."
+            origin="BADM 554 research"
+            links={[
+              { label: "Survey bot repo", href: "https://github.com/vishalsachdev/badm554-survey-bot" },
+            ]}
+          />
+          <ModelCard
+            title="Two-Phase Architecture"
+            description="Phase 1 (Instructor): Faculty defines intent via NLSpec, agents generate content, faculty approves, content pushes to Canvas. Phase 2 (Student): Course is delivered, agents personalize pathways based on learner profiles, mastery tracking drives concept-level feedback."
+            origin="PathShaper original"
+          />
+        </div>
+      </section>
+
+      {/* Connected repos */}
+      <section className="mb-10">
+        <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">
+          Connected Projects
+        </h2>
+        <div className="grid sm:grid-cols-2 gap-3">
+          <RepoCard
+            name="pathshaper"
+            description="This app. Instructor cockpit + generation dashboard + adaptive pathway viewer."
+            href="https://github.com/vishalsachdev/pathshaper"
+          />
+          <RepoCard
+            name="database-management"
+            description="Intelligent textbook for BADM 554. 8 chapters, 186-concept learning graph, MkDocs Material."
+            href="https://github.com/vishalsachdev/database-management"
+          />
+          <RepoCard
+            name="badm554-bot"
+            description="WhatsApp AI tutor (production). LLM-powered concept-level support for enrolled students."
+            href="https://github.com/vishalsachdev/badm554-bot"
+          />
+          <RepoCard
+            name="badm554-survey-bot"
+            description="Pre-course learner profiling. 68 automated interview sessions, skill gap analysis."
+            href="https://github.com/vishalsachdev/badm554-survey-bot"
+          />
+        </div>
+      </section>
+
       {/* What faculty define */}
       <section className="mb-10">
         <h2 className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-3">
@@ -222,5 +307,64 @@ function DeliverableRow({
         <p className="text-[10px] text-gray-400 mt-1 italic">{proposal}</p>
       </div>
     </div>
+  );
+}
+
+function ModelCard({
+  title,
+  description,
+  origin,
+  links,
+}: {
+  title: string;
+  description: string;
+  origin: string;
+  links?: { label: string; href: string }[];
+}) {
+  return (
+    <div className="card">
+      <div className="flex items-start justify-between gap-3 mb-1.5">
+        <h3 className="text-sm font-semibold text-gray-900">{title}</h3>
+        <span className="text-[10px] text-gray-400 font-medium whitespace-nowrap mt-0.5">{origin}</span>
+      </div>
+      <p className="text-xs text-gray-500 leading-relaxed">{description}</p>
+      {links && links.length > 0 && (
+        <div className="flex gap-3 mt-2">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[10px] font-medium text-[var(--navy)] hover:underline"
+            >
+              {link.label} &rarr;
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function RepoCard({
+  name,
+  description,
+  href,
+}: {
+  name: string;
+  description: string;
+  href: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="card block hover:ring-1 hover:ring-[var(--navy)]/20 transition-shadow"
+    >
+      <p className="text-xs font-bold text-[var(--navy)] font-mono">{name}</p>
+      <p className="text-[10px] text-gray-500 mt-1 leading-relaxed">{description}</p>
+    </a>
   );
 }
