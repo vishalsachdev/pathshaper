@@ -98,14 +98,14 @@ Single shared component: `src/app/components/Nav.tsx` — sticky navigation with
 
 ## Current Focus
 
-Phase 2 generation dashboard complete. Next: content generation (Ch 4-8) + Canvas push integration.
+Chapters 1-8 + 3b written and deployed. Overview page live. Next: Canvas push integration, remaining content items (overviews, quizzes, studios, labs).
 
 ## Roadmap
 
 - [x] Phase 0: Types, learning graph, NLSpec JSON files, Supabase dep
 - [x] Phase 1: Instructor cockpit UI (all routes built)
 - [x] Phase 2: Generation dashboard + Canvas sync readiness (39 items, API route, approve workflow)
-- [ ] Phase 2b: Content generation (chapters 4-8 via Dan McCreary skills)
+- [x] Phase 2b: Content generation (chapters 3b-8 written, textbook deployed to GitHub Pages)
 - [ ] Phase 3: Student phase (Supabase integration, real adaptive pathways)
 - [ ] Phase 4: Bot enhancement (concept-map.json in bot knowledge base)
 - [ ] Phase 5: Integration testing (e2e, holdout scenarios, FERPA audit)
@@ -113,3 +113,4 @@ Phase 2 generation dashboard complete. Next: content generation (Ch 4-8) + Canva
 ## Session Log
 
 - **2025-02-22**: Phase 0 + Phase 1 complete. Built types.ts (243 lines), learning-graph.ts (~420 lines, 186 concepts), 3 NLSpec JSON files, all 8 routes, updated Nav. Key pivot: rebuilt graph for 8-week format (was 15-week), corrected studio concept semantics. Committed to main (17 files, 2533 insertions).
+- **2026-02-22**: Phase 2 + 2b complete. Generation dashboard (39 items, API route, approve workflow). Wrote all textbook chapters (Ch 1-8 + 3b, ~5,100 lines). Built `/overview` one-pager with 9 mental model cards (NLSpec, Intelligent Textbook, L-C-E, AIAS, Core/Studio, Spiral, Survey Bot, Attractor/Dark Factory, Two-Phase), connected projects with live URLs. Deployed: PathShaper to Vercel (`pathshaper-554.vercel.app`), textbook to GitHub Pages. Configured Vercel auto-deploy from GitHub.
