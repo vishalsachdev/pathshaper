@@ -60,13 +60,13 @@ export default function OverviewPage() {
             ]}
           />
           <ModelCard
-            title="L-C-E Framework (Literacy \u2192 Competency \u2192 Expertise)"
-            description="MSBAi's progression model adapted from the UNESCO AI competency framework. Each learning outcome is tagged with an L-C-E level and a Bloom's verb. BADM 554 covers L\u2192C; later courses deepen to E. This gives the program a coherent vertical arc across 5 semesters."
+            title={"L-C-E Framework (Literacy \u2192 Competency \u2192 Expertise)"}
+            description={"MSBAi\u2019s progression model adapted from the UNESCO AI competency framework. Each learning outcome is tagged with an L-C-E level and a Bloom\u2019s verb. BADM 554 covers L\u2192C; later courses deepen to E. This gives the program a coherent vertical arc across 5 semesters."}
             origin="UNESCO / MSBAi"
           />
           <ModelCard
             title="AIAS (AI Assessment Integration Scale)"
-            description="A 0\u20133 scale printed on every assignment that tells students exactly how they may use AI. Level 0 = no AI (quizzes, oral defense). Level 2 = AI-assisted with attribution. Level 3 = AI as collaborator with full disclosure. Prevents ambiguity and enables progressive AI trust."
+            description={"A 0\u20133 scale printed on every assignment that tells students exactly how they may use AI. Level 0 = no AI (quizzes, oral defense). Level 2 = AI-assisted with attribution. Level 3 = AI as collaborator with full disclosure. Prevents ambiguity and enables progressive AI trust."}
             origin="MSBAi assessment design"
           />
           <ModelCard
@@ -80,11 +80,21 @@ export default function OverviewPage() {
             origin="Jerome Bruner (1960)"
           />
           <ModelCard
-            title="Survey Bot \u2192 Learner Profiles"
+            title={"Survey Bot \u2192 Learner Profiles"}
             description="A WhatsApp-based survey bot conducts automated interviews (68 sessions so far) to build student skill profiles before the course starts. These profiles feed the adaptive pathway engine — different starting points and studio sequences based on incoming skill gaps."
             origin="BADM 554 research"
             links={[
               { label: "Survey bot repo", href: "https://github.com/vishalsachdev/badm554-survey-bot" },
+            ]}
+          />
+          <ModelCard
+            title={"Attractor / Dark Factory"}
+            description={"StrongDM\u2019s open-source pattern where humans write only specifications, never code. Agents generate, test, and ship autonomously. Correctness is inferred from externally observable behavior (holdout scenarios), not code review. PathShaper applies this at Level 4\u20135: faculty write NLSpecs, agents execute in the dark, validation happens through simulated learner trajectories."}
+            origin="StrongDM (Dan Shapiro)"
+            links={[
+              { label: "Attractor repo", href: "https://github.com/strongdm/attractor" },
+              { label: "Five Levels framework", href: "https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/" },
+              { label: "Willison analysis", href: "https://simonwillison.net/2026/Feb/7/software-factory/" },
             ]}
           />
           <ModelCard
