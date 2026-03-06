@@ -75,6 +75,9 @@ export default function OverviewPage() {
             title="AIAS (AI Assessment Integration Scale)"
             description={"A 0\u20133 scale printed on every assignment that tells students exactly how they may use AI. Level 0 = no AI (quizzes, oral defense). Level 2 = AI-assisted with attribution. Level 3 = AI as collaborator with full disclosure. Prevents ambiguity and enables progressive AI trust."}
             origin="MSBAi assessment design"
+            links={[
+              { label: "AIAS in practice (Furze)", href: "https://leonfurze.com/2025/06/11/how-i-use-the-ai-assessment-scale-part-1/" },
+            ]}
           />
           <ModelCard
             title="Core vs Studio Split"
